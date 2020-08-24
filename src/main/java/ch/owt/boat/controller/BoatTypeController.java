@@ -3,6 +3,7 @@ package ch.owt.boat.controller;
 import ch.owt.boat.entity.BoatType;
 import ch.owt.boat.exception.BoatAppNotFoundException;
 import ch.owt.boat.service.BoatTypeService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api")
 @CrossOrigin("http://localhost:4200")
+@Tag(name = "Boat Type Controller", description = "The boat type API")
 public class BoatTypeController {
     
     @Autowired
