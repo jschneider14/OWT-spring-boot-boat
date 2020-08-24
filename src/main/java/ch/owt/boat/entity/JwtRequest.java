@@ -1,7 +1,10 @@
 package ch.owt.boat.entity;
 
+import io.swagger.v3.oas.annotations.Hidden;
+
 import java.io.Serializable;
 
+@Hidden
 public class JwtRequest implements Serializable {
 
     private static final long serialVersionUID = 5926468583005150707L;

@@ -3,6 +3,7 @@ package ch.owt.boat.controller;
 import ch.owt.boat.entity.Boat;
 import ch.owt.boat.exception.BoatAppNotFoundException;
 import ch.owt.boat.service.BoatServiceImpl;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +15,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api")
 @CrossOrigin(origins = "http://localhost:4200")
+@Tag(name = "Boat Controller", description = "The boat API")
 public class BoatController {
 
     @Autowired
@@ -22,7 +24,6 @@ public class BoatController {
     // expose /boats and return list of boats
     @GetMapping("/boats")
     public List<Boat> findAll() {
-        System.out.println("findAll()");
         return boatService.findAll();
     }
 
